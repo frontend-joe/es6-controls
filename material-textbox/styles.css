@@ -1,0 +1,72 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #151515;
+}
+
+.md-textbox {
+  position: relative;
+  font-family: "Euclid Circular A";
+}
+
+.md-textbox :is(label, span) {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  pointer-events: none;
+  color: #888888;
+  transition: 0.3s;
+}
+
+.md-textbox > label {
+  left: 10px;
+  translate: 0 -50%;
+  padding: 4px 8px;
+}
+
+.md-textbox > span {
+  right: 16px;
+  font-size: 28px;
+}
+
+.md-textbox > input {
+  height: 56px;
+  width: 220px;
+  padding-left: 16px;
+  border: 2px solid #888888;
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+  color: #f9f9f9;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.md-textbox > :is(input:focus, .has-value) {
+  border-color: #8f44fd;
+}
+
+.md-textbox > :is(input:focus, .has-value) ~ span {
+  color: #f9f9f9;
+}
+
+.md-textbox > :is(input:focus, .has-value) ~ label {
+  background: #151515;
+  color: rgba(255, 255, 255, 0.75);
+  translate: 0 -46px;
+}
