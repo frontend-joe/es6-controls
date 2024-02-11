@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="signup">
+      <h2>Login</h2>
+      <h3>Welcome back Joe!</h3>
+      <form class="form">
+        <div class="textbox password">
+          <input id="passwordInput" type="password" required />
+          <label>Password</label>
+          <span class="material-symbols-outlined"> lock </span>
+          <button
+            type="button"
+            id="passwordButton"
+            onclick="togglePassword(event)"
+          >
+            <span id="passwordIcon" class="material-symbols-outlined">
+              visibility
+            </span>
+          </button>
+        </div>
+        <button type="submit">
+          Login
+          <span class="material-symbols-outlined"> arrow_forward </span>
+        </button>
+      </form>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

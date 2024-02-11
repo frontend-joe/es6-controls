@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.pagination {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.pagination > button {
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.pagination > button::after {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 10px;
+  background: #f7b997;
+}
+
+.pacman {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -6px;
+  height: 30px;
+  width: 30px;
+  pointer-events: none;
+  transition: translate 0.25s linear;
+}
+
+.pacman.reverse {
+  margin-left: -14px;
+  rotate: -180deg;
+}
+
+.pacman:before,
+.pacman:after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 30px;
+  left: 0;
+  background: #ffff03;
+  transition: 0.3s;
+}
+
+.pacman:before {
+  top: 0;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  transform-origin: bottom center;
+  transform: rotate(-45deg);
+}
+
+.pacman:after {
+  bottom: 0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  transform-origin: top center;
+  transform: rotate(45deg);
+}
+
+@keyframes waka {
+  0% {
+  }
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+  }
+}
+
+.pagination:hover .pacman:before,
+.pagination:hover .pacman:after {
+  animation: waka 0.5s infinite;
+}
