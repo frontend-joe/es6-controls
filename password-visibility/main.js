@@ -1,7 +1,5 @@
 const passwordInput = document.querySelector("#passwordInput");
 
-const passwordButton = document.querySelector("#passwordButton");
-
 const passwordIcon = document.querySelector("#passwordIcon");
 
 const togglePassword = (e) => {
@@ -18,6 +16,5 @@ const togglePassword = (e) => {
 
   if (passwordLength) {
     passwordInput.focus();
-    // passwordInput.setSelectionRange(passwordLength, passwordLength);
   }
 };

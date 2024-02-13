@@ -7,8 +7,23 @@ body {
   place-items: center;
   margin: 0;
   height: 100vh;
-  background: url("bg.png");
+  overflow: hidden;
   font-family: "Euclid Circular A", "Poppins";
+}
+
+@keyframes background-move {
+  100% {
+    translate: 0 300px;
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh + 600px);
+  top: -300px;
+  background: url("bg.png");
+  animation: background-move 4s infinite linear;
 }
 
 button,
@@ -20,13 +35,6 @@ input {
   font-family: inherit;
   font-size: 16px;
   outline: none;
-}
-
-@keyframes clouds {
-  100% {
-    translate: -50vw -55%;
-    scale: 1 1.1;
-  }
 }
 
 .signup {
